@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   refresh() {
-    this.http.get<any[]>('/assets/api/communication/sms.json').subscribe(
+    this.http.get<any[]>('http://192.168.0.14/communication/GetSms').subscribe(
       data => {
         this.smsList = data;
         if (this.refresher) {
