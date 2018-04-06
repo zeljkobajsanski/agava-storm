@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Agava SMS
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="pullToRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <button ion-item *ngFor="let sms of smsList" (click)="send(sms)">
+      <p>{{sms.text}}</p>
+      <ion-badge item-end>{{sms.phoneNumbers.length}}</ion-badge>
+    </button>
+  </ion-list>
+</ion-content>

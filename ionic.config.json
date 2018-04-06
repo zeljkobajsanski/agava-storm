@@ -1,0 +1,8 @@
+{
+  "name": "agava-storm",
+  "app_id": "f06d30dd",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
