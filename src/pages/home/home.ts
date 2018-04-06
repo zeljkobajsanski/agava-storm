@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   refresh() {
-    this.http.get<any[]>('/assets/api/communication/sms.json').subscribe(
+    this.http.get<any[]>('http://api.agava.rs/communication/GetSms').subscribe(
       data => {
         this.smsList = data;
         if (this.refresher) {
